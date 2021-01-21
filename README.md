@@ -3,7 +3,7 @@ R based software that automatically generate Covid19 case graph
 
 This programme require R software to run.
 
-This programme works by taking the covid 19 cases from Johns Hopkins University (https://github.com/CSSEGISandData/COVID-19) every 24 hours and generate the graph from the provided data.
+It works by taking the covid 19 cases from Johns Hopkins University (https://github.com/CSSEGISandData/COVID-19) every 24 hours and generate the graph from the provided data.
 
 # How To Use
 1) Install the latest R software from https://www.r-project.org
