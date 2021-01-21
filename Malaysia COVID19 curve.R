@@ -32,8 +32,4 @@ Table <- data.frame(Dates = Date_num, Cases = malaysia_case$`Cumulative Cases`, 
 plot <- ggplot(Table, mapping = aes(x = Dates, y = Cases))  + geom_line()
 print(plot)
 
-break
-
-#Plotting output
-plot(Table$Dates, Table$Cases, xlab = "Months", ylab = "Cumulative Cases", type = "l")
 
