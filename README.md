@@ -7,11 +7,13 @@ This programme works by taking the covid 19 cases from John Hopkin University (h
 
 # How To Use
 1) Install the latest R software from https://www.r-project.org
-2) Install the following library via "install.packages()".
+2) Install the following library via "install.packages()"
+
     a) tidyverse
     b) ggplot2
     c) RCurl
     d) data.table
     e) dplyr
     f) lubridate
+
 3) Run the programme
