@@ -9,7 +9,7 @@ library(lubridate)
 #Data Source
 jhu_url <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
             
-#Filter country and Modify Table to remove unnecessary data
+#Filter country and Modify table to remove unnecessary data
 malaysia_case <- read.csv(url(jhu_url), header = TRUE, row.names = ) %>%
   filter(Country.Region == "Malaysia") %>%
   pivot_longer(-c(Province.State, Country.Region, Lat, Long), names_to = "Date", values_to = "Cumulative Cases") %>%
@@ -18,7 +18,7 @@ malaysia_case <- read.csv(url(jhu_url), header = TRUE, row.names = ) %>%
   select(-c(Province.State, Lat, Long))
  
 
-#Change some format
+#Change date format
 Date <- gsub("X", "", malaysia_case$Date)
 Date_num <- as.Date(Date, format = "%m.%d.%y")
 
