@@ -19,17 +19,17 @@ malaysia_case <- read.csv(url(jhu_url), header = TRUE, row.names = ) %>%
  
 
 #Change date format
-Date <- gsub("X", "", malaysia_case$Date)
+Dates <- gsub("X", "", malaysia_case$Date)
 Date_num <- as.Date(Date, format = "%m.%d.%y")
 
 
 #Create data frame
 Logged <- log10(Table$Cases)
-Table <- data.frame(Dates = Date_num, Cases = malaysia_case$`Cumulative Cases`, Log = Logged)
+Table <- data.frame(Date = Date_num, Cases = malaysia_case$`Cumulative Cases`, Log = Logged)
 
 
 #Plotting output
-plot <- ggplot(Table, mapping = aes(x = Dates, y = Cases))  + geom_line()
+plot <- ggplot(Table, mapping = aes(x = Date, y = Cases))  + geom_line()
 print(plot)
 
 
