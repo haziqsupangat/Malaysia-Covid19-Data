@@ -24,9 +24,8 @@ Date_num <- as.Date(Date, format = "%m.%d.%y")
 
 
 #Create data frame
+Table <- data.frame(Date = Date_num, Cases = malaysia_case$`Cumulative Cases`)
 Logged <- log10(Table$Cases)
-Table <- data.frame(Date = Date_num, Cases = malaysia_case$`Cumulative Cases`, Log = Logged)
-
 
 #Plotting output
 plot <- ggplot(Table, mapping = aes(x = Date, y = Cases))  + geom_line()
