@@ -25,4 +25,4 @@ Date_num <- as.Date(Dates, format = "%m.%d.%y")
 
 #Create data frame
 Table <- data.frame(Date = Date_num, Cases = malaysia_case$`Cumulative Cases`)
-write.csv(Table)
+write.csv(Table, row.names = FALSE)
