@@ -8,6 +8,22 @@ It works by taking the covid 19 cases from Johns Hopkins University
 (<https://github.com/CSSEGISandData/COVID-19>) every 24 hours and
 generate the graph from the provided data.
 
+# How To Use
+
+1.  Install the latest R software from <https://www.r-project.org>
+
+2.  Install the following library via “install.packages()”
+
+    1.  tidyverse
+    2.  ggplot2
+    3.  RCurl
+    4.  data.table
+    5.  dplyr
+    6.  lubridate
+
+3.  Run the programme
+
+
 ``` r
 library(dplyr)
 ```
@@ -110,17 +126,3 @@ print(plot)
 
 ![](Graph-of-Total-Cases_files/figure-markdown_github/unnamed-chunk-1-1.png)
 
-# How To Use
-
-1.  Install the latest R software from <https://www.r-project.org>
-
-2.  Install the following library via “install.packages()”
-
-    1.  tidyverse
-    2.  ggplot2
-    3.  RCurl
-    4.  data.table
-    5.  dplyr
-    6.  lubridate
-
-3.  Run the programme
