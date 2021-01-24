@@ -1,4 +1,5 @@
-# Malaysia-Covid19-Curve
+# Malaysia Covid19 Graph
+
 R based software that automatically generate Covid19 case graph
 
 This programme require R software to run.
