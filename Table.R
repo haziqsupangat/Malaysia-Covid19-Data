@@ -39,7 +39,7 @@ Dates <- gsub("X", "", malaysia_recover$Date)
 Date_num <- as.Date(Dates, format = "%m.%d.%y")
 
 
-#Filter country and Modify Table to remove unnecessary data (Recovered)
+#Filter country and Modify Table to remove unnecessary data (Deaths)
 malaysia_deaths <- read.csv(url(jhu_url2), header = TRUE, row.names = ) %>%
   filter(Country.Region == "Malaysia") %>%
   pivot_longer(-c(Province.State, Country.Region, Lat, Long), names_to = "Date", values_to = "Cumulative Deaths") %>%
