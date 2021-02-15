@@ -80,15 +80,12 @@ Table <- data.frame(Date = Date_num,
 #Plotting output
 
 plot <- ggplot(Table) +
-  geom_line(aes(x=Date, y=Cumulative.Cases),colour="black", se = "False", span = 0.3) +
-  geom_rect(data = Table, aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = colour), alpha = -0.1) +
-  scale_fill_identity()
+  geom_line(aes(x=Date, y=Cumulative.Cases),colour="black", se = "False", span = 0.3)
+  
 
 print(plot)
 
 #Github
 Master <- Table %>%
   filter(Date > "2020-01-20") %>%
-  ungroup()%>%
-  select(-c(Log, Ratio))
-write.csv(Master, '')
+  write.csv(Master, '')
